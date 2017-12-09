@@ -1,15 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
+using System.Collections.ObjectModel;
+
 
 namespace Selenium_CSharp
 {
     class Program
     {
+        
+        public IWebDriver driver = new ChromeDriver();
+
         static void Main(string[] args)
         {
+            PropertiesCollection.driver = new ChromeDriver();
+
+            PropertiesCollection.driver.Navigate().GoToUrl("https://www.google.com");
+            GPageObject googlePage = new GPageObject();
+
+            ResultsPage resultPage = googlePage.Search("Selenium");
+            resultPage.FOundingThirdLink();
+            resultPage.SelectingItem(3);
+
+
         }
+        
     }
 }
