@@ -26,10 +26,10 @@ namespace Selenium_CSharp
         {
             FoundedLinks = GoogleResultsPanel.FindElements(By.ClassName(Constants.GoogleResultsClassName));
         }
-        public void SelectingItem(int selectedItem)
+        public SelectedPage SelectingItem(int selectedItem)
         {
-            Console.WriteLine(FoundedLinks[selectedItem-1].Text);
             FoundedLinks[selectedItem-1].FindElement(By.XPath(Constants.HTMLAnchorTag)).Click();
+            return new SelectedPage();
         }
     }
 }

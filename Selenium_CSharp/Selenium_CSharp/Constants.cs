@@ -12,5 +12,6 @@ namespace Selenium_CSharp
         public const string GoogleResultsClassName = "r";
         public const string GoogleResultsPanelId = "search";
         public const string HTMLAnchorTag = "a";
+        public const string Content = "container";
     }
 }

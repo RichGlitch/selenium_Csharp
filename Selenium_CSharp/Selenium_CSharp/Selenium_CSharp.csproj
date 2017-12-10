@@ -57,6 +57,7 @@
     <Compile Include="PropertiesCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultsPage.cs" />
+    <Compile Include="SelectedPage.cs" />
     <Compile Include="SeleniumGetMethods.cs" />
   </ItemGroup>
   <ItemGroup>

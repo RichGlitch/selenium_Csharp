@@ -18,10 +18,10 @@ namespace Selenium_CSharp
             PropertiesCollection.driver.Navigate().GoToUrl("https://www.google.com");
             GPageObject googlePage = new GPageObject();
 
-            ResultsPage resultPage = googlePage.Search("Selenium");
+            ResultsPage resultPage = googlePage.Search("selenium");
             resultPage.FOundingThirdLink();
-            resultPage.SelectingItem(3);
-
+            SelectedPage selectedPage = resultPage.SelectingItem(3);
+            selectedPage.PrintContent();
 
         }
         
